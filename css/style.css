@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --oq-color: #fff;
+  --blue-color: #335eea;
+  --p-color: #869AB8;
+  --grey-color: #5068A9;
+  --box-shadow: .0177rem .0155rem 3rem .1rem rgba(51, 94, 234, .1)
+;
+  --tran-1: .2s ease;
+}
+
+html {
+  width: 100%;
+  font-size: 85%;
+}
+
+html body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+html body .container {
+  width: 83%;
+  margin: 0 auto;
+}
+
+html body img {
+  width: 100%;
+  height: 100%;
+}
+ul li {
+  list-style: none;
+}
+button {
+  background-color: var(--blue-color);
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: .2rem;
+  font-size: 1.2rem;
+  color: var(--oq-color);
+  font-weight: 550;
+  transition: .5s ease-in-out transform;
+}
+button:hover {
+  transform:translateY(-.7rem);
+  box-shadow: var(--box-shadow);
+}
+p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding-right: 2rem;
+
+}
+
+header {
+  width: 100%;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+nav .logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--blue-color)
+}
+nav ul {
+  display: flex;
+  width: 60%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+nav ul li {
+  color: #50669E;
+  font-weight: 550;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 1rem 2rem;
+  padding-bottom: 1rem;
+}
+nav ul li.li-btn {
+  display: none;
+}
+nav ul li.x {
+  display: none;
+}
+nav ul li .list {
+  position: absolute;
+  top: -20.4rem;
+  background: var(--oq-color);
+  box-shadow:var(--box-shadow);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 12rem;
+  height: 12rem;
+  font-weight: 500;
+  transform: var(--tran-1);
+}
+nav ul li .list.top {
+  top: 3.4rem;
+}
+nav ul li .list p:hover {
+  color: var(--blue-color);
+}
+nav .bars {
+  display: none;
+}
+
+header .showcae {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 0;
+  gap: 1rem;
+}
+
+.showcae .image {
+  width: 50%;
+}
+.showcae .text {
+  width: 50%;
+}
+.showcae .text h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  color: #333;
+  padding: 1rem 0;
+}
+.showcae .text h1  span {
+  color: var(--blue-color)
+}
+.showcae .text p {
+  width: 27rem;
+  color: #8A9CB8;
+}
+
+.showcae .text button {
+  margin: 2rem 0;
+}
+.showcae .text .doc {
+  background-color: #EAEFFD;
+  color: #335eea;
+  margin-left: 1rem;
+}
+
+@media (max-width: 990px) {
+  html {
+    font-size: 75%;
+  }
+  nav ul {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+    height: 100%;
+    background-color: var(--oq-color);
+    flex-direction: column;
+    border: .5px solid #888;
+    display: none;
+    transition: var(--tran-1)
+  }
+  nav ul.block {
+    display: flex;
+  }
+  nav ul li {
+    border-bottom: 1px solid var(--oq-color);
+    margin-bottom: 1rem;
+    transition: var(--tran-1);
+  }
+
+  nav ul li:hover {
+    border-bottom: 1px solid #333;
+  }
+  nav ul li .list {
+    display: none;
+  }
+  nav button.gl.btn {
+    display: none;
+  }
+  nav ul li.x {
+    display: inline-block;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 3rem;
+    color: #666;
+    right: 3rem;
+    border: none;
+  }
+  nav .bars {
+    display: block;
+    font-size: 2.3rem;
+    margin-right: 3rem;
+    color: #777;
+  }
+  nav button.btn.gl {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+  .showcae {
+    flex-direction: column-reverse;
+    padding: 3rem 0;
+    gap: 3rem;
+    text-align: center;
+  }
+  .showcae .text {
+    width: 100%;
+  }
+  .showcae .text p {
+    width: 80%;
+    align-content: center;
+    margin: 0 auto;
+  }
+  .showcae .image {
+    width: 100%;
+  }
+}
