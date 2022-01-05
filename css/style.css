@@ -20,10 +20,13 @@ html {
 }
 
 html body {
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
   font-family: 'Lato', sans-serif;
+}
+body.hidden {
+  overflow: hidden;
 }
 
 html body .container {
@@ -34,9 +37,16 @@ html body .container {
 html body img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 ul li {
   list-style: none;
+}
+h2 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 3rem;
+
 }
 button {
   background-color: var(--blue-color);
@@ -47,15 +57,17 @@ button {
   color: var(--oq-color);
   font-weight: 550;
   transition: .5s ease-in-out transform;
+  cursor: pointer;
 }
 button:hover {
   transform:translateY(-.7rem);
   box-shadow: var(--box-shadow);
 }
 p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   padding-right: 2rem;
+  font-weight: 500;
 
 }
 
@@ -157,6 +169,246 @@ header .showcae {
   margin-left: 1rem;
 }
 
+
+
+/* Build section */
+
+section#built {
+  width: 100%;
+  height: 100%;
+}
+section#built .built {
+  display: flex;
+  width: 100%;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+
+.built .box {
+  padding: 1rem 0;
+}
+.built .box i {
+  font-size: 3rem;
+  color: #335eea;
+  margin-bottom: 1.7rem;
+}
+.built .box h4 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.built .box p {
+  font-size: 1.5rem;
+  color: #869AB8;
+  margin-top: 1.7rem;
+}
+
+/* section partner */
+section#partner {
+  width: 100%;
+  height: 100%;
+  border-top: .1rem solid #d1d5da;
+  padding: 2rem 0;
+
+}
+.partner {
+  display: grid;
+  grid-template-areas:
+  "1 2 3 4 5 6"
+  ;
+  gap: 4rem;
+  padding: 2rem 0;
+  justify-content: space-between;
+}
+.partner .box {
+  /* width: 7rem; */
+  height: 3rem;
+  background-color: #fff;
+}
+.partner .box:nth-child(1) {
+  grid-area: "1";
+}
+.partner .box:nth-child(2) {
+  grid-area: "2";
+}
+.partner .box:nth-child(3) {
+  grid-area: "3";
+}
+.partner .box:nth-child(4) {
+  grid-area: "4";
+}
+.partner .box:nth-child(5) {
+  grid-area: "5";
+}
+.partner .box:nth-child(6) {
+  grid-area: "6";
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0;
+  background: linear-gradient(#F9FBFD, #ffff);
+  border-top: .1rem solid #d1d5da;
+}
+
+main .most {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+main .most .most-image {
+  width: 50%;
+
+}
+main .most .most-image .box:hover {
+  transform: translateY(-.7rem);
+  box-shadow: .0177rem .0155rem 9rem .1rem rgba(51, 94, 234, .1)
+
+}
+main .most .most-image  .box {
+  width: 26rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease-in-out;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+
+}
+main .most .most-image .image {
+  width: 26rem;
+}
+.most-image .image img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.most-image .input {
+  background-color: #fff;
+  padding: 2rem;
+}
+.most-image .input input {
+  margin-top: 2rem;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-bottom: .1rem solid #d1d5da;
+  font-size: 1.2rem;
+  padding-bottom: .3rem;
+  
+}
+.most-image .input input.submit {
+  margin-top: 2rem;
+  width: 100%;
+  height: 4rem;
+  color: #fff;
+  background-color: #42BA96;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+main .most .most-text {
+  width: 50%;
+}
+main .most .most-text h2 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 3rem;
+  padding-bottom: 1rem;
+}
+main .most .most-text h2  span {
+  color: #42BA96 ;
+}
+main .most .most-text p {
+  color: #8A9CB8;
+}
+main .most .most-text  .grid {
+  display: grid;
+  grid-template-areas:
+  "1 2"
+  "3 4"
+  ;
+  padding: 2.5rem 0;
+  gap: 1.3rem;
+}
+main .most .most-text  .grid .box {
+  color: #42BA96;
+  font-size: 1.3rem;
+}
+main .most .most-text  .grid .box i {
+  margin-right: 1.2rem;
+  background-color: #42ba9623;
+  padding: .3rem;
+  border-radius: 50%;
+}
+
+
+main .most .most-text {
+  width: 50%;
+}
+main .have {
+  display: flex;
+  padding-top: 5rem;
+  gap: 3rem;
+}
+main .have .have-text {
+  width: 50%;
+}
+main .have .have-image {
+  width: 50%;
+}
+main .have .have-text h2 {
+  margin-bottom: 1rem;
+}
+main .have .have-text h2 span {
+  color: #335eea;
+}
+main .have .have-text p {
+  color: #8A9CB8;
+}
+main .have .have-text .box {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+main .have .have-text .box i {
+  font-size: 3rem;
+  color: #335eea;
+  margin-right: 2rem;
+}
+main .have .have-text .box h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+main .have .have-text .box p {
+  font-size: 1.2rem;
+}
+
+main .have .have-image {
+  width: 50%;
+  position: relative;
+}
+main .have .have-image img {
+  position: absolute;
+  right: -14%;
+  width: 100%;
+  transform: skewY(1deg) rotateZ(7deg) rotateX(2deg);
+
+  box-shadow: .0177rem .0155rem 9rem .1rem rgba(51, 94, 234, .3)
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 990px) {
   html {
     font-size: 75%;
@@ -173,7 +425,8 @@ header .showcae {
     flex-direction: column;
     border: .5px solid #888;
     display: none;
-    transition: var(--tran-1)
+    transition: var(--tran-1);
+
   }
   nav ul.block {
     display: flex;
@@ -182,6 +435,7 @@ header .showcae {
     border-bottom: 1px solid var(--oq-color);
     margin-bottom: 1rem;
     transition: var(--tran-1);
+    font-size: 2rem;
   }
 
   nav ul li:hover {
@@ -211,6 +465,23 @@ header .showcae {
   nav button.btn.gl {
     display: none;
   }
+  .partner {
+    grid-template-areas:
+    "1 2 3"
+    "4 5 6"
+    ;
+    gap: 3rem;
+    justify-content: space-around;
+
+  }
+  main .most .most-text  .grid {
+    grid-template-areas:
+    "1"
+    "2"
+    "3"
+    "4"
+    ;
+  }
 }
 @media (max-width: 768px) {
   html {
@@ -233,4 +504,45 @@ header .showcae {
   .showcae .image {
     width: 100%;
   }
+  .built {
+    flex-direction: column;
+  }
+  .partner {
+    grid-template-areas:
+    "1 2"
+    "3 4"
+    "5 6"
+    ;
+    gap: 3rem;
+
+  }
+  main .most {
+    flex-direction: column-reverse;
+  }
+  main .most .most-image {
+    width: 90%;
+    margin: 0 auto;
+
+  }
+  main .most .most-text {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main .have {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+  main .have .have-image {
+    width: 100%;
+  }
+  main .have .have-image img {
+    position: relative;
+    right: 0;
+  }
+  main .have .have-text {
+    width: 100%;
+  }
 }
+
+

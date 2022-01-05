@@ -19,12 +19,32 @@ function onclickBlock(click, block, close) {
   const GlClick = document.querySelector(click);
   const GlBlock = document.querySelector(block);
   const GlClose = document.querySelector(close);
+  const htmlBody = document.querySelector("html body");
   GlClick.addEventListener("click", () => {
     GlBlock.classList.toggle("block");
+    htmlBody.classList.add("hidden");
   });
   GlClose.addEventListener("click", () => {
     GlBlock.classList.toggle("block");
+    htmlBody.classList.remove("hidden");
   });
 }
 
 onclickBlock("nav .bars .fa-bars", "nav ul", "nav ul li.x .fa-times-circle");
+
+// Typeit
+new TypeIt("#type1", {
+  speed: 90,
+  loop: true,
+  waitUntilVisible: true,
+})
+  .type("developers.", { delay: 400 })
+  .pause(1000)
+  .delete(11)
+  .type("designers.")
+  .pause(1000)
+  .delete(10)
+  .type("founders.")
+  .pause(1000)
+  .delete(9)
+  .go();
