@@ -24,6 +24,8 @@ html body {
   width: 100%;
   height: 100%;
   font-family: 'Lato', sans-serif;
+  color: #333;
+
 }
 body.hidden {
   overflow: hidden;
@@ -449,10 +451,96 @@ section#custom {
   display: block
 }
 
+/* Stay stayle */
+section#stay {
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0;
+  background: linear-gradient(#EAEDF1, #F1F4F8);
+}
+section#stay .stay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.stay .stay-text h2 span {
+  color: #335eea;
+  margin-bottom: 1rem;
+  display: block;
+}
+.stay .stay-text p {
+  color: var(--p-color);
+}
+.stay .stay-text .flex {
+  display: flex;
+  margin: 1.5rem 0;
+  letter-spacing: .1rem;
+}
+.stay .stay-text .flex  .box h3 {
+  font-size: 1.5rem;
+}
+.stay-text .flex  .box p {
+  font-size: 1.3rem;
+}
 
+/* Footer style */
+footer {
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0;
+  background:linear-gradient(#F1F4F8, #fff)  ;
+}
+footer .flex {
+  display: grid;
+  grid-template-areas: 
+  "1 2 3 4 5";
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+footer .flex .box h4 {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+footer .flex .box  p {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #F1F4F8;
+  transition: .2s ease-in-out;
 
+}
+footer .flex .box  p:hover {
+  border-bottom: 1px solid var(--p-color)
+}
+footer .flex .box:nth-child(1){
+  grid-area: "1";
+}
+footer .flex .box:nth-child(2){
+  grid-area: "2";
+}
+footer .flex .box:nth-child(3) {
+  grid-area: "3";
+}
+footer .flex .box:nth-child(4) {
+  grid-area: "4";
+}
+footer .flex .box:nth-child(5) {
+  grid-area: "5";
+}
+footer .flex .box img {
+  width: 10rem;
+  margin-bottom: 1rem;
 
-
+}
+footer .flex .box {
+  color: var(--p-color)
+}
+footer .flex .box .icon i {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
 
 
 @media (max-width: 990px) {
@@ -528,6 +616,12 @@ section#custom {
     "4"
     ;
   }
+  footer .flex {
+    display: grid;
+    grid-template-areas: 
+    "1 2 3"
+    "1 4 5";
+  }
 }
 @media (max-width: 768px) {
   html {
@@ -600,6 +694,22 @@ section#custom {
   .sweper-box .box .box-text {
     width:100%;
     height: 50%;
+  }
+  section#stay .stay {
+    flex-direction: column-reverse;
+  }
+  section#stay .stay .stay-text {
+    width: 70%;
+  }
+  section#stay .stay .stay-image {
+    width: 70%;
+  }
+  footer .flex {
+    display: grid;
+    grid-template-areas: 
+    "1 1"
+    "2 3"
+    "4 5";
   }
 }
 

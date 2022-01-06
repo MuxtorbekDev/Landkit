@@ -63,3 +63,30 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// Counter++++
+
+const increment = function (counter, newValue, interval) {
+  const currentValue = Number(counter.textContent);
+
+  const intervalFn = setInterval(function () {
+    counter.textContent++;
+    if (counter.textContent == newValue) clearInterval(intervalFn);
+  }, interval);
+};
+
+const counter1 = document.querySelector(".counter-1");
+counter1.textContent = 0;
+increment(counter1, 50, 80);
+
+const counter2 = document.querySelector(".counter-2");
+counter2.textContent = 0;
+increment(counter2, 24, 150);
+
+const counter3 = document.querySelector(".counter-3");
+counter3.textContent = 0;
+increment(counter3, 7, 300);
+
+const counter4 = document.querySelector(".counter-4");
+counter4.textContent = 0;
+increment(counter4, 100, 50);
