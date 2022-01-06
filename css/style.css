@@ -399,9 +399,55 @@ main .have .have-image img {
 
 }
 
-
-
-
+/* custom style */
+section#custom {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+}
+#custom .text {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+#custom .text p {
+  margin: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #869AB8;
+}
+.sweper-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem; 
+  margin-top: 2rem;
+  box-shadow: 1px 2px 7rem rgba(51, 94, 234, .1)
+}
+.sweper-box .box {
+  display: flex;
+}
+.sweper-box .box .box-image {
+  width: 45%;
+}
+.sweper-box .box .box-image img {
+  width: 100%;
+  height: 100%;
+}
+.sweper-box .box .box-text {
+  width: 50%;
+  padding: 3rem;
+  text-align: center;
+}
+.sweper-box .box .box-text img {
+  width: 10rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+.sweper-box .box .box-text span {
+  color :#869AB8;
+  margin-top: 2rem;
+  display: block
+}
 
 
 
@@ -542,6 +588,18 @@ main .have .have-image img {
   }
   main .have .have-text {
     width: 100%;
+  }
+  .sweper-box .box {
+    display: flex;
+    flex-direction: column;
+  }
+  .sweper-box .box .box-image {
+    width: 100%;
+    height: 50%;
+  }
+  .sweper-box .box .box-text {
+    width:100%;
+    height: 50%;
   }
 }
 
